@@ -6,20 +6,17 @@ import { portfolioImages } from "../../pages/PortfolioPage";
 const PREVIEW_COUNT = 8;
 const previewImages = portfolioImages.slice(0, PREVIEW_COUNT);
 
-// --- CTA Button reutilizável em qualquer secção ---
 export function PortfolioCTA({ className = "" }: { className?: string }) {
   const navigate = useNavigate();
   return (
     <button
       onClick={() => navigate("/portfolio")}
-      className={`group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-accent2 to-accent px-7 py-4 font-display font-bold text-[0.82rem] tracking-[0.1em] uppercase text-white shadow-[0_0_40px_rgba(255,106,43,0.35)] hover:shadow-[0_0_60px_rgba(255,106,43,0.55)] transition-all duration-300 hover:-translate-y-0.5 cursor-pointer ${className}`}
+      className={`group relative inline-flex items-center gap-2.5 rounded-full border border-accent/40 hover:border-accent bg-transparent px-6 py-3.5 font-display font-semibold text-[0.75rem] tracking-[0.1em] uppercase text-accent hover:text-white transition-all duration-300 cursor-pointer ${className}`}
     >
-      {/* Shimmer */}
-      <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none" />
-      <Grid3X3 className="w-4 h-4 shrink-0" />
-      <span>Ver Portfólio Completo</span>
-      <span className="ml-1 text-white/60 font-mono text-[0.65rem] font-normal">
-        {portfolioImages.length} fotos
+      <Grid3X3 className="w-3.5 h-3.5 shrink-0 text-accent group-hover:text-white transition-colors" />
+      <span>Ver Portfólio</span>
+      <span className="ml-0.5 text-accent/50 group-hover:text-white/50 font-mono text-[0.6rem] font-normal transition-colors">
+        ({portfolioImages.length})
       </span>
     </button>
   );

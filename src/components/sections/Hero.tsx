@@ -90,7 +90,7 @@ export function Hero() {
                 </svg>
               </ShimmerButton>
               
-              <PortfolioCTA className="text-[0.72rem] py-3.5 px-6 border-2 border-accent/40 text-accent bg-accent/5 hover:border-accent hover:bg-accent hover:text-bg-base hover:shadow-[0_0_35px_rgba(197,168,128,0.4)] transition-all duration-300" />
+              <PortfolioCTA className="text-[0.72rem] py-3.5 px-6" />
             </motion.div>
 
             {/* Quick trust stats */}
