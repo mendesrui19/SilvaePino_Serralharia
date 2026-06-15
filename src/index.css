@@ -28,6 +28,18 @@
   --animate-shimmer-slide: shimmerSlide var(--speed) ease-in-out infinite alternate;
   --animate-ping-sm: pingSm 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-services-ticker: services-ticker 42s linear infinite;
+  --animate-pulse-gold: pulse-gold 2s infinite ease-in-out;
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    border-color: rgba(197, 168, 128, 0.3);
+    box-shadow: 0 0 0 rgba(197, 168, 128, 0);
+  }
+  50% {
+    border-color: rgba(197, 168, 128, 1);
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+  }
 }
 
 @keyframes services-ticker {

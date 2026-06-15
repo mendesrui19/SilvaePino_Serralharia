@@ -11,7 +11,7 @@ export function PortfolioCTA({ className = "" }: { className?: string }) {
   return (
     <button
       onClick={() => navigate("/portfolio")}
-      className={`group relative inline-flex items-center gap-2.5 rounded-full border border-accent/40 hover:border-accent bg-transparent px-6 py-3.5 font-display font-semibold text-[0.75rem] tracking-[0.1em] uppercase text-accent hover:text-white transition-all duration-300 cursor-pointer ${className}`}
+      className={`group relative inline-flex items-center gap-2.5 rounded-full border border-accent/40 hover:border-accent bg-transparent px-6 py-3.5 font-display font-semibold text-[0.75rem] tracking-[0.1em] uppercase text-accent hover:text-white animate-pulse-gold hover:animate-none transition-all duration-300 cursor-pointer ${className}`}
     >
       <Grid3X3 className="w-3.5 h-3.5 shrink-0 text-accent group-hover:text-white transition-colors" />
       <span>Ver Portfólio</span>
