@@ -27,6 +27,12 @@
   --animate-float: float 4s ease-in-out infinite;
   --animate-shimmer-slide: shimmerSlide var(--speed) ease-in-out infinite alternate;
   --animate-ping-sm: pingSm 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-services-ticker: services-ticker 42s linear infinite;
+}
+
+@keyframes services-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
 }
 
 @keyframes spin-around {
