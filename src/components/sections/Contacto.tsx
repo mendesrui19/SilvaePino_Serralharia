@@ -181,7 +181,7 @@ export function Contacto() {
                   shimmerColor="#ffffff"
                   className="text-bg-base font-bold tracking-[0.16em] uppercase text-sm w-full py-4 shadow-[0_0_40px_rgba(197,168,128,0.25)] hover:-translate-y-0.5 transition-transform flex items-center justify-center gap-2"
                 >
-                  Pedir orçamento via WhatsApp
+                  Pedir Orçamento Grátis
                   <svg viewBox="0 0 16 16" fill="none" className="w-[14px] h-[14px]"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </ShimmerButton>
                 <p className="text-center text-[0.7rem] text-dim">

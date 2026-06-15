@@ -156,7 +156,7 @@ export function Services() {
               shimmerColor="#ffffff"
               className="text-bg-base font-bold tracking-widest uppercase text-[0.75rem] px-10 py-4 shadow-[0_0_50px_rgba(197,168,128,0.3)] hover:-translate-y-1 flex items-center gap-2.5 rounded-full"
             >
-              Peça o seu orçamento
+              Pedir Orçamento Grátis
               <svg viewBox="0 0 16 16" fill="none" className="w-[13px] h-[13px]">
                 <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
