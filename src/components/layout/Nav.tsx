@@ -3,6 +3,7 @@ import { cn } from '../../lib/utils';
 import { ShimmerButton } from '../ui/shimmer-button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { Phone } from 'lucide-react';
 
 const navLinks = [
   { id: 'sobre', label: 'Sobre' },
@@ -90,6 +91,15 @@ export function Nav() {
               </li>
             ))}
             <li>
+              <a 
+                href="tel:+351964053721" 
+                className="text-dim hover:text-accent transition-colors flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.05em] mr-1"
+              >
+                <Phone className="w-3.5 h-3.5 text-accent" />
+                <span>964 053 721</span>
+              </a>
+            </li>
+            <li>
               <ShimmerButton
                 href="#contacto"
                 background="#c5a880"
@@ -101,16 +111,27 @@ export function Nav() {
             </li>
           </ul>
 
-          {/* Hamburger */}
-          <button
-            className="flex md:hidden flex-col gap-[5px] p-1 cursor-pointer z-[210] relative"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Menu"
-          >
-            <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300 origin-center", isOpen && "rotate-45 translate-y-[6.5px]")} />
-            <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300", isOpen && "opacity-0 scale-x-0")} />
-            <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300 origin-center", isOpen && "-rotate-45 -translate-y-[6.5px]")} />
-          </button>
+          {/* Mobile Right Controls */}
+          <div className="flex md:hidden items-center gap-4">
+            <a
+              href="tel:+351964053721"
+              className="w-10 h-10 rounded-full bg-accent/15 border border-accent/35 flex items-center justify-center text-accent shadow-[0_0_15px_rgba(197,168,128,0.15)] hover:scale-105 transition-all"
+              aria-label="Ligar para Serralharia"
+            >
+              <Phone className="w-4 h-4 fill-current" />
+            </a>
+            
+            {/* Hamburger */}
+            <button
+              className="flex flex-col gap-[5px] p-1 cursor-pointer z-[210] relative"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Menu"
+            >
+              <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300 origin-center", isOpen && "rotate-45 translate-y-[6.5px]")} />
+              <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300", isOpen && "opacity-0 scale-x-0")} />
+              <span className={cn("block w-6 h-[1.5px] bg-white transition-all duration-300 origin-center", isOpen && "-rotate-45 -translate-y-[6.5px]")} />
+            </button>
+          </div>
         </div>
       </nav>
 
