@@ -99,6 +99,7 @@ export function Services() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const checkScrollLimits = () => {
     if (scrollRef.current) {
@@ -122,6 +123,28 @@ export function Services() {
       window.removeEventListener("resize", checkScrollLimits);
     };
   }, []);
+
+  // Autoplay
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || isHovered) return;
+
+    const interval = setInterval(() => {
+      const { scrollLeft, scrollWidth, clientWidth } = el;
+      if (scrollLeft >= scrollWidth - clientWidth - 10) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        const scrollAmount = window.innerWidth >= 1024 
+          ? clientWidth / 3 
+          : window.innerWidth >= 640 
+            ? clientWidth / 2 
+            : clientWidth;
+        el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -193,6 +216,8 @@ export function Services() {
         {/* Snap-scroll Carousel Container */}
         <div
           ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           className="flex gap-5 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
