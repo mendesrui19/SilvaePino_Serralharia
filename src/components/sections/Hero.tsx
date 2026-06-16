@@ -13,14 +13,14 @@ export function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 z-0 pointer-events-none"
       >
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,12,14,0.55)_0%,rgba(11,12,14,0.8)_60%,rgba(11,12,14,1)_100%)] z-10" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,12,14,0.4)_0%,rgba(11,12,14,0.75)_60%,rgba(11,12,14,0.95)_100%)] z-10" />
         <video
           src="/estou_a_fazer_um_site_para_uma.mp4"
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-80"
         />
         {/* Grid overlay for architectural texture */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.008)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.008)_1px,transparent_1px)] bg-[size:60px_60px] z-20" />
